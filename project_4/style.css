@@ -1,0 +1,52 @@
+
+
+
+.main {
+  width: 800px;
+  height: 106px;
+  border: 4px solid black;
+  display: flex;
+  background: #3A456B;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.class1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  width: 100px;
+  height: 50px;
+
+  
+}
+
+.class2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 50px;
+  border: 2px solid white;
+}
+
+.class3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+  width: 120px;
+  height: 100px;
+  border: 2px solid white;
+}
+
+.class4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 50px;
+  border: 2px solid white;
+}

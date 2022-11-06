@@ -1,0 +1,28 @@
+span {
+    color:blue;
+}
+.color {
+    background-color: aqua;
+    
+}
+.one {
+    background-color: beige;
+}
+.mark-font {
+    font-family: 'Marck Script';
+
+}
+button {
+    background-color: coral;
+}
+button:hover {
+    background-color: darkblue;
+}
+/* button {
+    background-color: aqua;
+} */
+p.font-bold {
+    font-weight: bold;
+}
+
+

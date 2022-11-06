@@ -1,0 +1,65 @@
+<h1>Sign Up</h1>
+<form method="POST">
+  <div>
+    <label>full name *
+        <input name="fullName" value="John Smith" placeholder="Your FullName" required />
+    </label>
+  </div>
+  Volume:<input type="range">
+  <div>
+    <label>gender</label>
+    <input type="radio" name="gender" value="male" checked /> male
+    <input type="radio" name="gender" value="female" /> female
+    <input type="radio" name="gender" value="other" /> other
+  </div>
+  <div>
+    <label for="email">email *</label>
+    <input placeholder="Enter your email..." id="email" type="email" required name="email" />
+  </div>
+  <div>
+    <label for="age">age</label>
+    <input id="age" type="number" name="age" min="1" max="120" step="0.5" />
+  </div>
+  <div>
+    <label>color theme</label>
+    <input type="color" name="color" />
+  </div>
+  <div>
+    <label for="password">password *</label>
+    <input id="password" type="password" name="password" required minlength="6" maxlength="10"/>
+  </div>
+  <div>
+    <label>avatar</label>
+    <input type="file" name="avatar" />
+  </div>
+  <div>
+    <label>Tell us about yourself...
+      <textarea name="tellus" id="tellus" cols="7" rows="2">
+      </textarea>
+    </label>
+  </div>
+      <input type="checkbox" name="agree1"  />HTML
+      <input type="checkbox" name="agree2"  />CSS
+      <input type="checkbox" name="agree3"  />JS
+  <input type="hidden" name="code" value="823yuh43">
+<div>
+  <label for="country_code">Enter Your Country Code</label>
+    <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code"><br><br>
+</div>
+  <div>
+    <label for="region">Select Your Region</label>
+    <select name="region" id="region">
+      <option value="msk">Moscow</option>
+      <option value="spb">SPb</option>
+      <option value="nsb">Novosibirsk</option>
+    </select>
+  </div>
+  <div>
+    <input name="street" placeholder="Enter Street" disabled />
+  </div>
+  <div>
+    <input type="checkbox" name="agree" checked required />
+    <label>I agree with the <a href="#">policy *</a></label>
+  </div>
+  <button type="submit">Submit</button>
+</form>
