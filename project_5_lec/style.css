@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  background: lightgray;
+  overflow: hidden;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+main::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+main {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+header {
+  border-right: 1px solid gray;
+  width: 140px;
+  padding: 20px;
+}
+
+main {
+  padding: 20px;
+  max-height: 90%;
+  overflow-y: scroll;
+}
+
+.q {
+  width: 100px;
+  height: 16px; 
+  background: darkblue;
+  border: 1px solid blue;
+}
+
+.second {
+  font-size: 10px;
+  border: 1px solid blue;
+  width: 10em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

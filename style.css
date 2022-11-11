@@ -1,0 +1,33 @@
+.big {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border: 3px solid black;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.one {
+   
+    width: 50px;
+    height: 20px;
+    border: 3px solid black;
+}
+.two {
+   
+    width: 20px;
+    height: 40px;
+    border: 3px solid black;
+}
+.three {
+   
+    width: 20px;
+    height: 60px;
+    border: 3px solid black;
+}
+.four {
+   
+    width: 20px;
+    height: 20px;
+    border: 3px solid black;
+}
