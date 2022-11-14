@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 9. Напишите функцию, которая будет вызываться прямо при открытии страницы. Функция должна запрашивать у пользователя логин и пароль. 
+    Если пользователь вводит логин “admin” и пароль “password”, выводить пользователю браузерное сообщение с текстом:
+    “Добро пожаловать, создатель”. В противном случае, выводить “Ты не пройдешь!”. -->
+    <script>
+        function authorization(login, password) {
+            if (login == "admin" && password == "password") {
+                alert("Добро пожаловать, создатель");
+            } else {
+                alert("Ты не пройдешь!");
+            }
+        }
+        authorization(prompt("введите логин"),prompt("Введите пароль"));
+    </script>
+
+</body>
+
+</html>
