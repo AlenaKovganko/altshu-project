@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array = [10, 20, 3];
+        // 1. some() соответсвие хотя бы одному данному элементу
+        console.log("some " + array.some(test => test == 3));
+        // 2. reduce()
+        console.log("reduce " + array.reduce((total, value) => total + value));
+        // 3. every() - соответсвие всех элементов данному элементу
+        console.log("every " + array.every(test => test == 3));
+        // 4.map() - Этот метод принимает функцию в качестве параметра и создает новый массив с результатом вызова указанной функции для каждого элемента массива.
+        console.log("массив map " + array.map(y => y + 1));
+        // 5. flat() - соответсвие всех элементов данному элементу
+        let arrayFlat = [[1, 2], [3, 4], 5];
+        console.log(arrayFlat.flat());
+        // 6. filter() - Этот метод принимает функцию в качестве параметра и возвращает новый массив, содержащий все элементы массива, для которого функция фильтрации передавалась в качестве аргумента, и возвращает ее со значением true.
+        console.log("filter " + array.filter(element => element % 10 == 0));
+        // 7. findIndex() Этот метод принимает функцию в качестве параметра и в дальнейшем применяет ее к массиву.
+        console.log("findIndex " + array.findIndex(x => x == 20));
+        // 8. find() 
+        console.log("find " + array.find(x => x.id == 0));
+        // 9.  sort() Этот метод принимает функцию в качестве параметра. Он сортирует элементы массива и возвращает их.
+        console.log("sort " + array.sort((a, b) => a - b));
+        // 10.  concat() Этот метод объединяет два или более массива/значения и возвращает новый массив.
+        let arrayConcat = [1, 2, 4];
+        console.log("contact " + arrayConcat.concat(array));
+        // 11.   fill() Этот метод заполняет все элементы массива одинаковым значением, от начального индекса (по умолчанию 0) до конечного индекса (по умолчанию array.length).
+        let arrayFill = [1, 2, 3, 4, 5];
+        console.log(arrayFill.fill(0, 1, 4));
+        // 12 includes() Этот метод возвращает значение true, если массив содержит определенный элемент, и значение false — если нет.
+        console.log("include " + array.includes(3));
+        // 13 reverse() Этот метод меняет порядок следования элементов в массиве на обратный. Первый элемент становится последним, а последний — первым.
+        console.log("reverse " + array.reverse());
+        // 14. flatMap Этот метод применяет функцию к каждому элементу массива, а затем сглаживает результат в новый массив. Он объединяет метод flat() и метод map() в одну функцию.
+        let arrayFlatMap = [[1], [2], [3]];
+        console.log("flatMap " + arrayFlatMap.flatMap(x => x * 10));
+        // 15.   lastIndexOf() возвращает индекс последнего вхождения элементов в массив, если элемента нет, то возвращается -1
+        console.log("lastIndexOf()" + "индекс числа 3 " + array.lastIndexOf(3));
+        // 16. Получение фрагмента массива 
+        let arraySlice = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        console.log(arraySlice.slice(2, 4));
+        // 17 Для извлечения элементов из массива в виде строки используют метод  toString() или a.join().
+        console.log(arraySlice.toString());
+        console.log(arraySlice.join(" "));
+        // 18 Копирование массивов  
+        var a = [1, 2, 3, 4, 5];
+        console.log(a.copyWithin(0, 2));
+        let b;
+        console.log("копирование " + (b = Array.of(a)));
+
+
+    </script>
+
+</body>
+
+</html>

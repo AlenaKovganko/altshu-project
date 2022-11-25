@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.clear();
+        // let user = new Object();
+        // user.name = "john";
+        // user.surname = "smith";
+        // user["name"] = "Pete";
+        // console.log(user);
+        // console.log(delete user.name);
+        // console.log(user);
+        // let salaries = {
+        //     John: 100,
+        //     Ann: 160,
+        //     Pete: 130
+        // }
+
+        // let sum = 0;
+        // for (let i in salaries) {
+
+        //     sum = sum + (Number(salaries[i]));
+        // }
+        // console.log(sum);
+        // const user = {
+        //     name: "John"
+        // };
+
+        // // это будет работать?
+        // user.name = "Pete";
+        // console.log(user);
+        // let menu = {
+        //     width: 200,
+        //     height: 300,
+        //     title: "My menu"
+        // };
+        // function multiplyNumeric() {
+        //     for (let i in menu) {
+        //         if (typeof  menu[i] == 'number') {
+
+        //             menu[i] = menu[i] * 2;
+        //         }
+
+        //     }
+
+        // }
+        // multiplyNumeric(menu);
+        // console.log(menu);
+        let schedule = {};
+        function isEmpty() {
+            for (let i in schedule) {
+                return false;
+            }
+            return true;
+
+        }
+
+
+        alert(isEmpty(schedule)); // true
+
+        schedule["8:30"] = "get up";
+
+        alert(isEmpty(schedule));
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

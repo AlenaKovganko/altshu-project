@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        img {
+            display: none;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Веб-страница </h1>
+    <form>
+        <input type="button" value="Вызвать окно" onclick="showModalWin()">
+    </form>
+    <div id="popupWin" class="modalwin">
+
+        <h1> Форма обратной связи </h1>
+
+        <section class="content">
+            <form>
+                <input type="text" placeholder="Имя">
+                <input type="email" id="email" placeholder="email">
+                <input type="text" placeholder="Поделитесь Вашими мыслями">
+                <button class="brown-button">Отправить</button>
+        </section>
+
+        <h6> Вы можете связаться с нами</h6>
+        <a href="https://github.com/AlenaKovganko/our_comand"> Github </a>
+
+
+
+    </div>
+    <script>
+        function showModalWin() {
+
+            var darkLayer = document.createElement('div'); // слой затемнения
+            darkLayer.id = 'shadow'; // id чтобы подхватить стиль
+            document.body.appendChild(darkLayer); // включаем затемнение
+
+            var modalWin = document.getElementById('popupWin'); // находим наше "окно"
+            modalWin.style.display = 'block'; // "включаем" его
+
+            darkLayer.onclick = function () {  // при клике на слой затемнения все исчезнет
+                darkLayer.parentNode.removeChild(darkLayer); // удаляем затемнение
+                modalWin.style.display = 'none'; // делаем окно невидимым
+                return false;
+            };
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="joke"></p>
+
+    <div class="card">
+        <h2></h2>
+        <p></p>
+    </div>
+
+    <div class="card">
+        <h2>Title 2</h2>
+        <p>Lorem ip</p>
+        <script>
+            console.clear();
+
+            let arr = [2, 6, "John", "h"];
+
+            let obj = {
+                firstName: "John",
+                lastName: "Smith",
+                age: 33,
+                location: "London"
+            };
+
+            console.log(obj);
+            console.log(obj["age"]);
+            console.log(obj["lastName"]);
+            console.log(obj.firstName);
+
+            obj.isActive = true;
+            obj["someData"] = "some data";
+            obj["someData"] = "some new data";
+            console.log(obj);
+            obj.isActive = false;
+
+            let jsonString = JSON.stringify(obj);
+            console.log(jsonString);
+
+            let objectFromJson = JSON.parse(jsonString);
+            console.log(objectFromJson);
+
+            let str = '{"name":"John", "age":30, "car":null}';
+            console.log("String: ", str);
+            let objFromJsonString = JSON.parse(str);
+            console.log(objFromJsonString);
+            objFromJsonString.car = "Toyota";
+            console.log(objFromJsonString);
+
+            let jsonFromObjFromJsonString = JSON.stringify(objFromJsonString);
+            console.log(jsonFromObjFromJsonString);
+
+            // exercise
+            let jokeAboutJs = "1 + '2' = 12";
+
+            const data = '{"id":371,"type":"general","joke":"Why does a chicken coop only have two doors? Because if it had four doors it would be a chicken sedan."}';
+            let jokeObject = JSON.parse(data);
+            jokeObject.joke = jokeAboutJs;
+            document.querySelector('.joke').textContent = jokeObject.joke;
+
+            // fetchFunction()
+
+            // .addEventListener('click', () => {
+            // fetchFunction();
+            //});
+
+            // AJAX
+            // fetch('URL', [options]);
+            const getNorrisJoke = () => {
+                const JOKE_URL = 'https://api.chucknorris.io/jokes/random';
+
+                fetch(JOKE_URL)
+                    .then(res => res.json())
+                    .then((data) => {
+                        console.log(data);
+                        console.log(data.value);
+                        document.querySelector('.joke').textContent = data.value;
+                    })
+                    .catch((err) => {
+                        console.error("Error!", err);
+                    });
+            }
+
+            getNorrisJoke();
+            // нарисовать кнопку и текстовый контейнер для шутки
+            // повесить на кнопку обработчик событий на клик
+            // в обработчике вызывать функцию получения шуток (объявленную где-нибудь выше)
+            // в данной функции вызывать фетч запрос, обрабатывать ответ и, если он не пустой, записывать в текстовый контейнер
+            // если контент пустой, выводить, допустим какую-нибудь статичную строку с шуткой или сообщение "Ууууупс! Что-то пошло не так"
+
+            let obj1 = {
+                title: "Title 1",
+                content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse minus cumque rem delectus repudiandae optio blanditiis nam asperiores nemo ab eligendi explicabo adipisci, vel iusto quasi dolores deleniti sit qui."
+            };
+
+            let newsArray = [
+                {
+                    title: "Title 1",
+                    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse minus cumque rem delectus repudiandae optio blanditiis nam asperiores nemo ab eligendi explicabo adipisci, vel iusto quasi dolores deleniti sit qui."
+                },
+                {
+                    title: "Title 2",
+                    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse minus cumque rem delectus repudiandae optio blanditiis nam asperiores nemo ab eligendi explicabo adipisci, vel iusto quasi dolores deleniti sit qui."
+                },
+                {
+                    title: "Title 3",
+                    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse minus cumque rem delectus repudiandae optio blanditiis nam asperiores nemo ab eligendi explicabo adipisci, vel iusto quasi dolores deleniti sit qui."
+                }
+            ];
+
+            // for (let i = 0; i < arr.length; i++);
+
+            let card = document.querySelector('.card');
+            let cardTitle = card.querySelector('h2');
+            cardTitle.textContent = obj1.title;
+            let cardParagraph = card.querySelector('p');
+            cardParagraph.textContent = obj1.content;
+
+
+
+        </script>
+    </div>
+
+</body>
+
+</html>

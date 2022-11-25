@@ -1,0 +1,102 @@
+
+<html>
+    <div>
+      <div id="title"> <div> 
+        
+        <h2> </h2>
+        <button> Show cat </button>
+      <img src="" alt="!!!">
+        <input type="text" name="fullname">
+        <span class="fullError"> </span>
+        <p class="thisParClass">
+            !!!Lorem ipsum dolor sit amet consectetur adipisicing elit. Id facere eveniet, recusandae quisquam enim
+            nesciunt?
+            Quidem ut facilis accusantium voluptas corrupti assumenda labore debitis dolore neque nihil, non optio ea!
+        </p>
+        <p id="thisPar" class="thisParClass">
+            It is me
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id facere eveniet, recusandae quisquam enim nesciunt?
+            Quidem ut facilis accusantium voluptas corrupti assumenda labore debitis dolore neque nihil, non optio ea!
+        </p>
+    </div>
+    <script>
+        console.clear();
+
+let div = document.querySelector("div");
+// console.log(div.firstChild.nextSibling.nextSibling);
+// let thisPar = document.querySelector(".thisParClass");
+// console.log(thisPar);
+// console.log(thisPar.parentElement);
+
+// console.log(newNode);
+// div.appendChild(newNode);
+
+// div.insertBefore(newNode, queryId);
+let title = document.querySelector("#title-wrapper");
+let img = document.querySelector("img");
+img.setAttribute("alt", "Pretty cat");
+img.setAttribute("src", "https://i.pinimg.com/736x/f4/d2/96/f4d2961b652880be432fb9580891ed62.jpg");
+let newNode = document.createElement('h1');
+// document.querySelector("#title-wrapper").appendChild(newNode);
+// let queryId = document.querySelector("#thisPar");
+newNode.innerHTML = img.hasAttribute("alt")
+  ? img.getAttribute("alt")
+  : "cat";
+
+div.insertBefore(newNode, title);
+// img.removeAttribute("src");
+// input.setAttribute("value", "пока");
+// let parToRemove = document.querySelector(".removeme");
+// let parToRemoveParent =  parToRemove.parentElement;
+// let removeElement = parToRemoveParent.removeChild(parToRemove);
+// document.querySelector('div').append(removeElement);
+let count = 0; 
+// let h2 = document.querySelector("h2");
+// document.addEventListener("click", () => {
+//   console.log("clicked");
+//   count ++;
+//   h2.innerHTML = count;
+// });
+// img.style.height = "100px";
+// img.addEventListener('click', () => {
+//   console.log("cat is clicked");
+//   console.log(img.height);
+
+//    img.style.height = img.style.height == "100px"
+//   ? "200px"
+//   : "100px" ;
+// });
+let btn = document.querySelector("button");
+let isImgShow = false;
+btn.addEventListener('click', (e) => {
+
+   img.style.display =  isImgShow ?  'none':  'block' ;
+   isImgShow = !isImgShow;
+    // console.log(isImgShow);
+  e.target.innerHTML =  isImgShow 
+   ? "Hide a cat" 
+  : "Show cat";
+});
+// let usersInput = [];
+// document.addEventListener('keydown', (e) => {
+//   console.log(e.key);
+//   usersInput.push(e.key);
+//   console.log( usersInput.join(''));  
+// });
+let input = document.querySelector('input[name="fullname"]');
+
+input.addEventListener('change', (e) => {  
+  console.log('changed', e.target);
+  console.log(input.value);
+  if (input.value == 'john') {
+    document.querySelector('.fullError').innerHTML = 'джон не пройдет';
+  } else {
+    document.querySelector('.fullError').innerHTML = '';
+  }
+});
+    </script>
+    </html>
+
+

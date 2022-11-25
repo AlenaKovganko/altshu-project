@@ -10,29 +10,23 @@
 </head>
 
 <body>
-    <div class="big">
-        <div class="one"> 1 </div>
-        <div class="two"> 2 </div>
-        <div class="three" > 3 </div>
-        <div class="four"> 4 </div>
-
-    </div>
-    <!-- <form>
-        <input type="text" placeholder="место для текста"> <br>
-        <input type="password"> <br>
-        <input type="email" placeholder="email"> <br>
-        <input type="radio"> <br>
-        <textarea cols="50" rows="50"> </textarea> <br>
-        <div>
-            <label for="region">Select Your Region</label>
-            <select name="region" id="region">
-              <option value="msk">Moscow</option>
-              <option value="spb">SPb</option>
-              <option value="nsb">Novosibirsk</option>
-            </select>
-          </div>
-        <input type="submit" value="Отправить">
-    </form> -->
+    
+     <form>
+      <div>
+        <input name="street" placeholder="Enter Street" disabled />
+      </div>
+      <div>
+        <input type="checkbox" name="agree" checked required />
+        <label>I agree with the <a href="#">policy *</a></label>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <script> 
+    let button = document.querySelector('button');
+    button.addEventListener('click', (e) => {
+      alert("hjkk");
+    })
+    </script>
 
 
 </body>
